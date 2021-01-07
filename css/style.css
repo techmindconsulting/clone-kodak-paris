@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: rgba(72,84,97);
+    --black:rgb(3, 3, 3)
+    --shadow:  rgba(0, 0, 0, 0.15);
+    --top-bar-height: 78px;
+    --yellow: #ffb700;
+    --yellow-opacity: rgba(255, 204, 0, 0.75);
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.header-topbar {
+    box-shadow: 0px 1px 3px var(--shadow);
+    padding: 20px 40px;
+    height: var(--top-bar-height);
+}
+
+.header-logo-wrapper {
+    display: inline-block;
+}
+
+.header-menu {
+    position: absolute;
+    top: calc(var(--top-bar-height)/2) ;
+    right: 20px; 
+    display: inline-block;
+}
+
+.header-menu ul {
+    list-style-type: none;
+}
+
+.header-menu li {
+    display: inline-block;
+}
+
+.header-menu li a {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-size: 0.78rem;
+    padding: 0 27px;
+    position: relative;
+}
+
+.header-menu li:first-child a::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    width: 52px;
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    width: 52px;
+    opacity: 1;
+}
+
+.header-menu li a::before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    width: 0px;
+    background-color: var(--yellow);
+    transition: .5s;
+    opacity: 0;
+}
+.header-menu li a:hover::before {
+    content:'';
+    width: 52px;
+    opacity: 1;
+    border: 1px solid var(--yellow);
+}
+
+.header-banner {
+    background-image: linear-gradient(
+        to right,
+        rgba(72,84,97,0.4) 70%,
+        rgba(40,49,59,0.5)), 
+    url('../images/banner-objectif-photo.jpg');
+    background-color: var(--grey);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.header-banner h2 {
+    font-size: 3rem;
+}
+
+.header-banner p {
+    margin: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.header-banner .button-action {
+    width: 230px;
+    background-color: var(--yellow-opacity);
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 12px 35px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header-banner .button-action:hover {
+    background: var(--yellow);
+}
+
+.arrow {
+    position: absolute;
+    font-size: 3rem;
+}
+
+.arrow a {
+    color: white;
+}
+
+.arrow-left {
+  top: 50%;
+  left: 10px;
+}
+
+.arrow-right {
+    top: 50%;
+    right: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 10px;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    .header-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .arrow {
+        display: none;
+    }
+}
