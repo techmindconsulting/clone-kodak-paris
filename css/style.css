@@ -89,7 +89,7 @@ a {
 .header-banner {
     background-image: linear-gradient(
         to right,
-        rgba(72,84,97,0.4) 70%,
+        rgba(72,84,97,0.4),
         rgba(40,49,59,0.5)), 
     url('../images/banner-objectif-photo.jpg');
     background-color: var(--grey);
