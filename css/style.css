@@ -93,13 +93,17 @@ a {
         rgba(40,49,59,0.5)), 
     url('../images/banner-objectif-photo.jpg');
     background-color: var(--grey);
-    height: 80vh;
+    height: 65vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding-top: 10%;
+}
+
+.header-banner > * {
+    position: relative;
+    top: calc(50% - 143px);
 }
 
 .header-banner h2 {
@@ -136,12 +140,12 @@ a {
 }
 
 .arrow-left {
-  top: 50%;
+  top: 36%;
   left: 10px;
 }
 
 .arrow-right {
-    top: 50%;
+    top: 36%;
     right: 10px;
 }
 
