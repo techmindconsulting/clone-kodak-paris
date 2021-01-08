@@ -117,13 +117,13 @@ a {
 }
 
 .header-banner .button-action {
-    width: 230px;
     background-color: var(--yellow-opacity);
     font-weight: 700;
     border-radius: 30px;
     padding: 12px 35px;
     text-transform: uppercase;
     color: var(--black);
+    top: calc(30%);
 }
 
 .header-banner .button-action:hover {
