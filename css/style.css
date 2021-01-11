@@ -18,6 +18,10 @@ html {
     font-size: 14px
 }
 
+body {
+    height: 1500px;
+}
+
 a {
     text-decoration: none;
     color: var(--black);
@@ -25,27 +29,25 @@ a {
 
 .header-topbar {
     box-shadow: 0px 1px 3px var(--shadow);
-    padding: 20px 40px;
+    padding: 0 40px;
     height: var(--top-bar-height);
-}
-
-.header-logo-wrapper {
-    display: inline-block;
+    position: fixed;
+    border: 1px solid white;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-menu {
-    position: absolute;
-    top: calc(var(--top-bar-height)/2) ;
-    right: 20px; 
-    display: inline-block;
+   flex-basis: 60%;
 }
 
 .header-menu ul {
     list-style-type: none;
-}
-
-.header-menu li {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-menu li a {
@@ -53,7 +55,6 @@ a {
     font-weight: 600;
     letter-spacing: 0.2rem;
     font-size: 0.78rem;
-    padding: 0 27px;
     position: relative;
 }
 
@@ -101,9 +102,10 @@ a {
     text-align: center;
 }
 
-.header-banner > * {
-    position: relative;
-    top: calc(50% - 143px);
+.header-banner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .header-banner h2 {
@@ -149,7 +151,7 @@ a {
     right: 10px;
 }
 
-
+/*
 @media screen and (max-width: 1200px) {
     html {
         font-size: 10px;
@@ -168,3 +170,4 @@ a {
         display: none;
     }
 }
+*/
