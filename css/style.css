@@ -5,13 +5,17 @@
 }
 
 :root {
+    --white: #ffffff;
     --grey: rgb(72, 84, 97);
+    --light-grey: #f9f9f9;
     --black: rgb(3, 3, 3);
     --shadow: rgba(5, 4, 4, 0.5);
-    --top-bar-height: 78px;
     --yellow: #ffb700;
     --yellow-opacity: rgba(255, 204, 0, 0.75);
+    --yellow-dark: #fac932;
     --red: #ff0000;
+    --salmon: #ff675b;
+    --top-bar-height: 78px;
 }
 
 html {
@@ -57,7 +61,7 @@ section h2 {
 
 section p {
     text-align: center;
-    color: #211F1F;
+    color: var(--black);
     margin: 2rem 0 1rem 0;
     font-size: 1.1rem;
 }
@@ -93,7 +97,7 @@ address {
 }
 
 hr {
-    color: #ebebeb;
+    color: var(--light-grey);
     border-style: solid;
     width: 90%;
     margin: 0 auto;
@@ -110,26 +114,26 @@ hr {
 
 .button-cta {
     display: inline-block;
-    color: white;
+    color: var(--white);
     padding: 18px 25px;
     border-radius: 5px;
-    background-color: #ff675b;
+    background-color: var(--salmon);
     background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
     font-size: 1.2rem;
 }
 
 
 .bg-yellow {
-    background-color: #fac932;
+    background-color: var(--yellow-dark);
 }
 
 .bg-grey {
-    background-color:#F9F9F9;
+    background-color: var(--light-grey);
 }
 
 .bg-black {
     background-color: var(--black);
-    color: white;
+    color: var(--white);
 }
 
 .red {
@@ -142,7 +146,7 @@ hr {
 }
 
 .arrow a {
-    color: white;
+    color: var(--white);
 }
 
 .arrow-left {
@@ -161,7 +165,7 @@ hr {
     height: var(--top-bar-height);
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,7 +227,7 @@ hr {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
@@ -256,7 +260,7 @@ hr {
 .services {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .service {
@@ -337,7 +341,6 @@ hr {
     align-self: center;
 }
 
-
 .footer {
     margin: 20px;
     padding: 5rem 20px;
@@ -346,8 +349,8 @@ hr {
 .footer .footer-items {
     padding: 0 10px;
     display: flex;
-    width: 100%;
     justify-content: space-between;;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 80%;
 }
@@ -368,11 +371,10 @@ hr {
     margin: 0 1rem;
 }
 
-/*
+
 @media screen and (max-width: 1200px) {
     html {
-        font-size: 10px;
-        color: white;
+        font-size: 13px;
     }
 }
 
@@ -380,11 +382,13 @@ hr {
     .header-menu {
         display: none;
     }
-}
 
-@media screen and (max-width: 500px) {
+    main {
+        padding: 0 40px;
+        width: 100%;
+        margin: 0 auto;
+    }
     .arrow {
         display: none;
     }
 }
-*/
