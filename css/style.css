@@ -7,15 +7,17 @@
 :root {
     --grey: rgb(72,84,97);
     --black: rgb(3, 3, 3);
-    --shadow:  rgba(0, 0, 0, 0.15);
+    --shadow:  rgba(0, 0, 0, 0.5);
     --top-bar-height: 78px;
     --yellow: #ffb700;
     --yellow-opacity: rgba(255, 204, 0, 0.75);
+    --red: #FF0000;
 }
 
 html {
     font-family: "Open Sans", sans-serif;
-    font-size: 14px
+    font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,12 +29,20 @@ a {
     color: var(--black);
 }
 
+.link-cta {
+    display: inline-block;
+    width: 100%;
+    margin: 2rem auto;
+    color: var(--red);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 .header-topbar {
     box-shadow: 0px 1px 3px var(--shadow);
     padding: 0 40px;
     height: var(--top-bar-height);
     position: fixed;
-    border: 1px solid white;
     width: 100%;
     background-color: white;
     display: flex;
@@ -149,6 +159,70 @@ a {
 .arrow-right {
     top: 36%;
     right: 10px;
+}
+
+section.our-services {
+    margin-top: 1rem;
+    padding: 0 40px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+section.our-services h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    color: transparent;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.service {
+    flex-basis: 25%;
+}
+
+.service img {
+    margin-bottom: 1.5rem;
+}
+
+.service h3 {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.service h3 a {
+    font-size: 1.5rem;
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.service p {
+    color: black;
+    font-size: 1.25rem;
+    width: 250px;
+    margin-bottom: 1rem;
+    line-height: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+.service a {
+    color: var(--red);
+}
+
+.service a:hover {
+    color: var(--grey);
+}
+
+.service a.link::after {
+    content: '>';
+    font-size: 1.2rem;
 }
 
 /*
