@@ -331,6 +331,11 @@ hr {
     width: 48%;
 }
 
+.photowrap .photowrap-item img {
+    width: 100%;
+}
+
+
 .footer {
     margin: 20px;
     padding: 5rem 20px;
