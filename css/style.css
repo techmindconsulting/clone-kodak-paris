@@ -5,28 +5,98 @@
 }
 
 :root {
-    --grey: rgb(72,84,97);
+    --grey: rgb(72, 84, 97);
     --black: rgb(3, 3, 3);
-    --shadow:  rgba(0, 0, 0, 0.5);
+    --shadow: rgba(5, 4, 4, 0.5);
     --top-bar-height: 78px;
     --yellow: #ffb700;
     --yellow-opacity: rgba(255, 204, 0, 0.75);
-    --red: #FF0000;
+    --red: #ff0000;
 }
 
 html {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     scroll-behavior: smooth;
 }
 
-body {
-    height: 1500px;
+main {
+    padding: 0 40px;
+    width: 80%;
+    margin: 0 auto;
 }
 
+header h2 {
+    font-size: 42px;
+}
+
+section {
+    margin-top: 1rem;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+header h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+section p {
+    text-align: center;
+    color: #211F1F;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 1.3rem;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+}
 a {
     text-decoration: none;
     color: var(--black);
+}
+
+strong {
+    font-weight: bold;
+}
+
+address {
+    font-style: normal;
+}
+
+hr {
+    color: #ebebeb;
+    border-style: solid;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .link-cta {
@@ -36,6 +106,53 @@ a {
     color: var(--red);
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.button-cta {
+    display: inline-block;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 5px;
+    background-color: #ff675b;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+    font-size: 1.2rem;
+}
+
+
+.bg-yellow {
+    background-color: #fac932;
+}
+
+.bg-grey {
+    background-color:#F9F9F9;
+}
+
+.bg-black {
+    background-color: var(--black);
+    color: white;
+}
+
+.red {
+    color: var(--red);
+}
+
+.arrow {
+    position: absolute;
+    font-size: 3rem;
+}
+
+.arrow a {
+    color: white;
+}
+
+.arrow-left {
+    top: 36%;
+    left: 20px;
+}
+
+.arrow-right {
+    top: 36%;
+    right: 20px;
 }
 
 .header-topbar {
@@ -51,7 +168,7 @@ a {
 }
 
 .header-menu {
-   flex-basis: 60%;
+    flex-basis: 60%;
 }
 
 .header-menu ul {
@@ -68,8 +185,8 @@ a {
     position: relative;
 }
 
-.header-menu li:first-child a::before{
-    content:'';
+.header-menu li:first-child a::before {
+    content: "";
     position: absolute;
     top: 50%;
     left: -4px;
@@ -81,30 +198,28 @@ a {
 }
 
 .header-menu li a::before {
-    content:'';
+    content: "";
     position: absolute;
     top: 50%;
     left: -4px;
     width: 0px;
     background-color: var(--yellow);
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
 }
+
 .header-menu li a:hover::before {
-    content:'';
+    content: "";
     width: 52px;
     opacity: 1;
     border: 1px solid var(--yellow);
 }
 
 .header-banner {
-    background-image: linear-gradient(
-        to right,
-        rgba(72,84,97,0.4),
-        rgba(40,49,59,0.5)), 
-    url('../images/banner-objectif-photo.jpg');
+    background-image: linear-gradient(to right, rgba(72, 84, 97, 0.4), rgba(40, 49, 59, 0.5)),
+        url("../images/banner-objectif-photo.jpg");
     background-color: var(--grey);
-    height: 65vh;
+    height: 84vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -113,13 +228,9 @@ a {
 }
 
 .header-banner {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.header-banner h2 {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-banner p {
@@ -142,50 +253,15 @@ a {
     background: var(--yellow);
 }
 
-.arrow {
-    position: absolute;
-    font-size: 3rem;
-}
-
-.arrow a {
-    color: white;
-}
-
-.arrow-left {
-  top: 36%;
-  left: 10px;
-}
-
-.arrow-right {
-    top: 36%;
-    right: 10px;
-}
-
-section.our-services {
-    margin-top: 1rem;
-    padding: 0 40px;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
-
-section.our-services h2 {
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin: 2rem 0;
-    color: transparent;
-}
-
 .services {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 70%;
-    margin: 0 auto;
+    flex-wrap: nowrap;
 }
 
 .service {
-    flex-basis: 25%;
+    width: 250px;
+    margin: 0 10px;
 }
 
 .service img {
@@ -193,7 +269,7 @@ section.our-services h2 {
 }
 
 .service h3 {
-    margin: 1.5rem 0;
+    margin: 1.25rem 0 1rem 0;
     text-align: center;
 }
 
@@ -205,11 +281,9 @@ section.our-services h2 {
 
 .service p {
     color: black;
-    font-size: 1.25rem;
     width: 250px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     line-height: 1.6rem;
-    padding-bottom: 1rem;
 }
 
 .service a {
@@ -221,8 +295,70 @@ section.our-services h2 {
 }
 
 .service a.link::after {
-    content: '>';
+    content: ">";
     font-size: 1.2rem;
+}
+
+.cameras {
+    margin: 40px 20px ;
+    padding: 20px;
+}
+.cameras h2 {
+    text-align: left;
+}
+
+.cameras h4 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.cameras p {
+    text-align: left;
+}
+
+.photowrap {
+    margin: 40px 20px;
+}
+
+.photowrap .photowrap-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.photowrap .photowrap-item {
+    width: 48%;
+}
+
+.footer {
+    margin: 20px;
+    padding: 5rem 20px;
+    line-height: 1.8rem;
+}
+.footer .footer-items {
+    padding: 0 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer-item {
+    width: 25%;
+    padding: 0 15px;
+    line-height: 2rem;
+}
+
+.footer-item .street {
+    margin: 10px 0;
+}
+
+
+.footer-item:last-child img {
+    float: left;
+    margin: 0 1rem;
 }
 
 /*
