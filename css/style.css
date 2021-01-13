@@ -229,6 +229,7 @@ hr {
     background-repeat: no-repeat;
     color: var(--white);
     text-align: center;
+    width: 100%;
 }
 
 .header-banner {
@@ -270,6 +271,7 @@ hr {
 
 .service img {
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .service h3 {
@@ -327,13 +329,14 @@ hr {
 
 .photowrap .photowrap-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
 .photowrap .photowrap-item {
-    width: 48%;
+    width: 49%;
 }
 
 .photowrap .photowrap-item img {
@@ -357,6 +360,7 @@ hr {
 
 .footer-item {
     width: 25%;
+    min-width: 250px;
     padding: 0 15px;
     line-height: 2rem;
 }
@@ -384,11 +388,17 @@ hr {
     }
 
     main {
-        padding: 0 40px;
+        padding: 0 20px;
         width: 100%;
         margin: 0 auto;
     }
     .arrow {
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .photowrap .photowrap-item {
+        width: 100%;
     }
 }
