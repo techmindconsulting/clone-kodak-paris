@@ -332,12 +332,14 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     padding: 20px;
 }
 
 .photowrap .photowrap-item {
-    width: 49%;
+    flex: 1 0 49%;
+    min-width: 320px;
+    max-width: 550px;
+    /*width: 49%;*/
 }
 
 .photowrap .photowrap-item img {
@@ -355,7 +357,6 @@ hr {
     display: flex;
     justify-content: space-between;;
     flex-wrap: wrap;
-    align-content: center;
     margin: 0 auto;
     width: 80%;
 }
