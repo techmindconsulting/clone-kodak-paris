@@ -281,6 +281,10 @@ hr {
     color: var(--white);
     text-align: center;
     width: 100%;
+    animation-name: slide-banner;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .header-banner {
@@ -289,10 +293,23 @@ hr {
     align-items: center;
 }
 
+.header-banner h2 {
+    transform: translate(-150%);
+    animation-name: slide-title;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 .header-banner p {
+    transform: translate(150%);
     margin: 2rem;
     font-size: 1.4rem;
     letter-spacing: 2px;
+    animation-name: slide-title;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .header-banner .button-action {
@@ -320,6 +337,12 @@ hr {
     min-width: 200px;
     margin: 0 10px;
     flex: 0 1 20%;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: scale(1.1);
 }
 
 .service img {
@@ -425,6 +448,18 @@ hr {
     margin: 0 1rem;
 }
 
+.icon-whatsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+.icon-whatsapp:hover {
+    transform: rotate(90deg);
+}
+
 
 @media screen and (max-width: 1200px) {
     html {
@@ -466,4 +501,12 @@ hr {
         margin: 10px 0;
     }
 
+}
+
+.header-menu li.has-bigsubmenu div {
+    display: none;
+}
+
+.header-menu li.has-submenu ul {
+    display: none;
 }

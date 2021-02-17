@@ -1,0 +1,19 @@
+@keyframes slide-banner {
+    0% {
+        background-image: url("../images/banner-objectif-photo-1.jpg");
+    }
+
+    60% {
+        background-image: url("../images/banner-objectif-photo-2.jpg");
+    }
+
+    100% {
+        background-image: url("../images/banner-objectif-photo-3.jpg");
+    }
+}
+
+@keyframes slide-title {
+    100% {
+        transform: translate(0);
+    }
+}

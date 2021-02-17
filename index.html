@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Clone Kodak Express Paris</title>
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/animation.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="icon" href="images/camera.png" type="images/png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,12 +23,58 @@
                 </div>
                 <nav class="header-menu">
                     <ul>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Cartes cadeaux</a></li>
-                        <li><a href="#our-services">Nos services</a></li>
-                        <li><a href="">Appareils</a></li>
-                        <li><a href="">Objectifs et flash</a></li>
-                        <li><a href="">Péllicules</a></li>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Cartes cadeaux</a></li>
+                        <li class="has-bigsubmenu">
+                            <a href="#our-services">Nos services</a>
+                            <div>
+                                <ul>
+                                    <li><a href="#">Photo argentique</a></li>
+                                    <li><a href="#">Tirages argentiques</a></li>
+                                    <li><a href="#">Retirages, agrand.</a></li>
+                                    <li><a href="#">Matériel argentique</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Photo numérique</a></li>
+                                    <li><a href="#">Tirages numériques</a></li>
+                                    <li><a href="#">Panneaux et montage photos</a></li>
+                                    <li><a href="#">Agrandissement sur traceur</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Photo d'identité</a></li>
+                                    <li><a href="#">Photo d'identité bébé</a></li>
+                                    <li><a href="#">Permis de conduire</a></li>
+                                    <li><a href="#">Photos d'identité aux normes</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Autres services</a></li>
+                                    <li><a href="#">Albums photos</a></li>
+                                    <li><a href="#">Numérisation de cassettes</a></li>
+                                    <li><a href="#">Cadeau photo personnalisé</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="">Appareils</a>
+                            <ul>
+                                <li><a href="#">Argentiques</a></li>
+                                <li><a href="#">Jetables</a></li>
+                                <li><a href="#">Pack event jetables</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="">Objectifs et flash</a>
+                            <ul>
+                                <li><a href="#">Neuf et d'occasion</a></li>
+                                <li><a href="#">Flash</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="">Péllicules</a>
+                            <ul>
+                                <li><a href="#">Photos instantanées</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -89,7 +136,7 @@
             <section id="our-services">
                 <div class="services">
                     <div class="service">
-                        <img src="https://picsum.photos/id/100/250/140" alt="service tirage argentique">
+                        <img src="https://picsum.photos/id/100/250/140" alt="service tirage argentique" />
                         <h3><a href="">Tirage argentique</a></h3>
                         <p>
                             Nous développons et tirons toutes les photos de vos films argentiques (films négatifs ou
@@ -99,7 +146,7 @@
                         <a href="#" class="link">En savoir plus</a>
                     </div>
                     <div class="service">
-                        <img src="https://picsum.photos/id/1004/250/140" alt="service tirage argentique">
+                        <img src="https://picsum.photos/id/1004/250/140" alt="service tirage argentique" />
                         <h3><a href="">Matériel photo argentique</a></h3>
                         <p>
                             Appareils photo jetables, pellicules 35mm et 120mm, pellicules professionnelles, objectifs,
@@ -109,7 +156,7 @@
                         <a href="#" class="link">En savoir plus</a>
                     </div>
                     <div class="service">
-                        <img src="https://picsum.photos/id/101/250/140" alt="service tirage argentique" >
+                        <img src="https://picsum.photos/id/101/250/140" alt="service tirage argentique" />
                         <h3><a href="">Matériel photo argentique</a></h3>
                         <p>
                             Venez avec votre smartphone, votre clé USB, votre appareil photo, votre carte mémoire… : on
@@ -119,7 +166,7 @@
                         <a href="#" class="link"> En savoir plus</a>
                     </div>
                     <div class="service">
-                        <img src="https://picsum.photos/id/1010/250/140" alt="service tirage argentique">
+                        <img src="https://picsum.photos/id/1010/250/140" alt="service tirage argentique" />
                         <h3><a href="">Matériel photo argentique</a></h3>
                         <p>
                             Identité, passeport, permis de conduire, pass navigo, club de sport, CV… Toutes nos photos
@@ -247,13 +294,16 @@
                         équipe vous accueille donc avec bonne humeur pour tous vos travaux photos !
                     </p>
                     <h5>Conseils photo</h5>
-                 
-                    <img src="https://via.placeholder.com/40" alt="picture">
+
+                    <img src="https://via.placeholder.com/40" alt="picture" />
                     <p>Conseils pour réussir ses photos argentiques</p>
-                    <img src="https://via.placeholder.com/40" alt="picture">
+                    <img src="https://via.placeholder.com/40" alt="picture" />
                     <p>Retrouvez l'appareil photo jetable ou prêt à photographier</p>
                 </div>
             </div>
         </footer>
+        <div class="icon-whatsapp">
+            <img src="images/whatsapp.png" width="60" alt="contacter nous sur what'app" />
+        </div>
     </body>
 </html>
