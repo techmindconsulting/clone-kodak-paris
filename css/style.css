@@ -111,7 +111,7 @@ hr {
 .link-cta {
     display: inline-block;
     width: 100%;
-    margin: 2rem auto;
+    margin: 3rem auto;
     color: var(--red);
     font-size: 1.3rem;
     font-weight: bold;
@@ -178,7 +178,7 @@ hr {
 }
 
 .header-menu {
-    flex-basis: 60%;
+    flex-basis: 75%;
 }
 
 .header-logo-wrapper {
@@ -398,16 +398,15 @@ hr {
     min-width: 200px;
     margin: 0 10px;
     flex: 0 1 20%;
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-out;
     cursor: pointer;
 }
 
 .service:hover {
     transform: scale(1.1);
     background-color: white;
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 10px;
+    box-shadow: 0px 1px 3px var(--shadow);
+    padding: 5px;
 }
 
 .service img {
