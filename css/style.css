@@ -19,7 +19,7 @@
 }
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     scroll-behavior: smooth;
 }
@@ -42,7 +42,7 @@ section {
 }
 
 header h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 section h1 {
@@ -52,7 +52,7 @@ section h1 {
 }
 
 section h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 2rem;
     text-transform: uppercase;
@@ -66,8 +66,13 @@ section p {
     font-size: 1.1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
 }
 
 h4 {
@@ -118,10 +123,9 @@ hr {
     padding: 18px 25px;
     border-radius: 5px;
     background-color: var(--salmon);
-    background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.01) 100%);
     font-size: 1.2rem;
 }
-
 
 .bg-yellow {
     background-color: var(--yellow-dark);
@@ -167,12 +171,18 @@ hr {
     width: 100%;
     background-color: var(--white);
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    z-index: 1;
 }
 
-.header-topbar .header-menu {
+.header-menu {
     flex-basis: 60%;
+}
+
+.header-logo-wrapper {
+    justify-items: start;
 }
 
 .icon-menu {
@@ -184,7 +194,7 @@ hr {
     border-radius: 10px;
     padding: 2px 5px;
     opacity: 0.7;
-    display:none;
+    display: none;
 }
 
 .icon-menu a {
@@ -202,6 +212,7 @@ hr {
     position: fixed;
     right: -300px;
     top: 0;
+    z-index: 1;
     width: 300px;
     height: 100vh;
     box-shadow: 0px 1px 3px var(--shadow);
@@ -213,12 +224,11 @@ hr {
     right: 0px;
 }
 
-
-
 .header-sidebar img {
     padding: 0 100px;
 }
-.header-sidebar ul, .header-sidebar img {
+.header-sidebar ul,
+.header-sidebar img {
     margin-top: 3rem;
 }
 
@@ -232,15 +242,23 @@ hr {
     justify-content: space-between;
 }
 
+.header-menu li.has-submenu {
+    position: relative;
+    z-index: 1;
+}
+
 .header-menu li a {
+    display: inline-block;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.2rem;
     font-size: 0.78rem;
     position: relative;
+    width: 100%;
+    padding: 20px;
 }
 
-.header-menu li:first-child a::before {
+.header-menu li:first-child:not(li li) a::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -270,9 +288,52 @@ hr {
     border: 1px solid var(--yellow);
 }
 
+/** GRAND SOUS-MENU ***/
+.header-menu li.has-bigsubmenu div {
+    position: absolute;
+    left: 0;
+    display: none;
+    justify-content: space-around;
+    padding: 0 150px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.header-menu li.has-bigsubmenu ul {
+    display: block;
+}
+
+.header-menu li.has-bigsubmenu:hover div {
+    display: flex;
+    box-shadow: 0px 1px 3px var(--shadow);
+}
+
+/** PETIT SOUS-MENU **/
+.header-menu ul.submenu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: white;
+    width: 250px;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.header-menu li.has-submenu:hover ul.submenu {
+    display: block;
+}
+
 .header-banner {
-    background-image: linear-gradient(to right, rgba(72, 84, 97, 0.4), rgba(40, 49, 59, 0.5)),
-        url("../images/banner-objectif-photo.jpg");
+    background-image: linear-gradient(
+        to right, 
+        rgba(72, 84, 97, 0.4), 
+        rgba(40, 49, 59, 0.5)),
+        url("../images/banner-objectif-photo-1.jpg");
     background-color: var(--grey);
     height: 84vh;
     background-position: center;
@@ -319,7 +380,7 @@ hr {
     padding: 12px 35px;
     text-transform: uppercase;
     color: var(--black);
-    top: calc(30%);
+    transition: all 0.5s ease-out;
 }
 
 .header-banner .button-action:hover {
@@ -343,6 +404,10 @@ hr {
 
 .service:hover {
     transform: scale(1.1);
+    background-color: white;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .service img {
@@ -381,7 +446,7 @@ hr {
 }
 
 .cameras {
-    margin: 40px 20px ;
+    margin: 40px 20px;
     padding: 20px;
 }
 .cameras h2 {
@@ -426,7 +491,7 @@ hr {
 .footer .footer-items {
     padding: 0 10px;
     display: flex;
-    justify-content: space-between;;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 80%;
@@ -441,7 +506,6 @@ hr {
 .footer-item .street {
     margin: 10px 0;
 }
-
 
 .footer-item:last-child img {
     float: left;
@@ -459,7 +523,6 @@ hr {
 .icon-whatsapp:hover {
     transform: rotate(90deg);
 }
-
 
 @media screen and (max-width: 1200px) {
     html {
@@ -479,12 +542,13 @@ hr {
     .icon-menu {
         display: block;
     }
-    
+
     main {
         padding: 0 20px;
         width: 100%;
         margin: 0 auto;
     }
+
     .arrow {
         display: none;
     }
@@ -500,13 +564,4 @@ hr {
         flex: 0 1 100%;
         margin: 10px 0;
     }
-
-}
-
-.header-menu li.has-bigsubmenu div {
-    display: none;
-}
-
-.header-menu li.has-submenu ul {
-    display: none;
 }
