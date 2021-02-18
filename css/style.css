@@ -289,15 +289,16 @@ hr {
 }
 
 /** GRAND SOUS-MENU ***/
-.header-menu li.has-bigsubmenu div {
+.header-menu li.has-bigsubmenu .wrapper {
     position: absolute;
     left: 0;
     display: none;
     justify-content: space-around;
-    padding: 0 150px;
+    padding: 20px 150px;
     width: 100%;
     background-color: white;
     z-index: 1;
+
 }
 
 .header-menu li.has-bigsubmenu ul {
